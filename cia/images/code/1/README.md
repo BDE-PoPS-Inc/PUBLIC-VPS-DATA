@@ -1,6 +1,4 @@
-# BDE-PPS - Data
-
-## [cia/images/code/1/](https://data.bde-pps.fr/cia/images/code/1/)
+## [cia/images/code/](https://data.bde-pps.fr/cia/images/code/)
 
 - f: [parantade0.svg](https://data.bde-pps.fr/cia/images/code/1/parantade0.svg)
 - f: [anthill.svg](https://data.bde-pps.fr/cia/images/code/1/anthill.svg)

@@ -1,6 +1,4 @@
-# BDE-PPS - Data
-
-## [cia/images/code/2/](https://data.bde-pps.fr/cia/images/code/2/)
+## [cia/images/code/](https://data.bde-pps.fr/cia/images/code/)
 
 - f: [bird_watching_2.png](https://data.bde-pps.fr/cia/images/code/2/bird_watching_2.png)
 - f: [gnalcats.png](https://data.bde-pps.fr/cia/images/code/2/gnalcats.png)

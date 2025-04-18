@@ -1,6 +1,4 @@
-# BDE-PPS - Data
-
-## [cia/pdf/code/](https://data.bde-pps.fr/cia/pdf/code/)
+## [cia/pdf/](https://data.bde-pps.fr/cia/pdf/)
 
 - d: [6/](https://data.bde-pps.fr/cia/pdf/code/6/)
 - d: [5/](https://data.bde-pps.fr/cia/pdf/code/5/)

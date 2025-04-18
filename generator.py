@@ -19,9 +19,10 @@ def main(root: pathlib.Path):
         current_path = pathlib.Path(dirpath).relative_to(PATH)
         current_path_str = str(current_path).replace("\\", "/")
 
-        res = "# BDE-PPS - Data\n\n"
+        res = ""
         if current_path_str != ".":
-            res += f"## [{current_path_str}/]({URL + '/' + current_path_str}/)\n\n"
+            parent = os.path.dirname(current_path_str)
+            res += f"## [{parent}/]({URL + ('/' if parent != "" else "") + parent}/)\n\n"
 
         for folder in dirnames:
             if folder.startswith(".git"):
@@ -29,7 +30,7 @@ def main(root: pathlib.Path):
             res += f"- d: [{folder}/]({URL + '/' + (current_path_str if current_path_str != "." else "") + ('/' if current_path_str != "." else "") + folder}/)\n"
 
         for file in filenames:
-            if file == "README.md" or (current_path_str == "." and (file == "LICENSE" or file == "CNAME" or file == ".env" or file == "generator.py")) or file.startswith(".git"):
+            if file == "README.md" or file == "LICENSE" or file.startswith(".git"):
                 continue
             res += f"- f: [{file}]({URL + '/' + (current_path_str if current_path_str != "." else "") + ('/' if current_path_str != "." else "") + file})\n"
 
