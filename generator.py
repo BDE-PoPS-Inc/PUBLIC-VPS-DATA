@@ -30,7 +30,7 @@ def main(root: pathlib.Path):
             res += f"- d: [{folder}/]({URL + '/' + (current_path_str if current_path_str != "." else "") + ('/' if current_path_str != "." else "") + folder}/)\n"
 
         for file in filenames:
-            if file == "README.md" or file == "LICENSE" or file.startswith(".git"):
+            if file == "README.md" or (current_path_str == "." and (file == "LICENSE" or file == "CNAME" or file == ".env" or file == "generator.py")) or file.startswith(".git"):
                 continue
             res += f"- f: [{file}]({URL + '/' + (current_path_str if current_path_str != "." else "") + ('/' if current_path_str != "." else "") + file})\n"
 
