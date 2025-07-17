@@ -4,8 +4,10 @@ import pathlib
 
 
 dotenv.load_dotenv()
-URL: str = os.getenv("URL")
-PATH: str = pathlib.Path(os.path.dirname(os.path.abspath(__file__)))
+
+
+URL: str = os.getenv("URL", "")
+PATH: pathlib.Path = pathlib.Path(os.path.dirname(os.path.abspath(__file__)))
 
 
 if not URL:
@@ -14,10 +16,14 @@ if not URL:
 
 def main(root: pathlib.Path):
     res: str
-    current_path: str
+    current_path: pathlib.Path
+    current_path_str: str
     for dirpath, dirnames, filenames in os.walk(root):
         current_path = pathlib.Path(dirpath).relative_to(PATH)
         current_path_str = str(current_path).replace("\\", "/")
+
+        if current_path_str == ".git":
+            continue
 
         res = ""
         if current_path_str != ".":
@@ -40,3 +46,4 @@ def main(root: pathlib.Path):
 
 if __name__ == "__main__":
     main(PATH)
+
