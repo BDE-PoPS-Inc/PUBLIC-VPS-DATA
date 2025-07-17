@@ -22,7 +22,7 @@ def main(root: pathlib.Path):
         current_path = pathlib.Path(dirpath).relative_to(PATH)
         current_path_str = str(current_path).replace("\\", "/")
 
-        if current_path_str == ".git":
+        if current_path_str.startswith(".git"):
             continue
 
         res = ""
