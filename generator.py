@@ -28,7 +28,7 @@ def main(root: pathlib.Path):
         res = ""
         if current_path_str != ".":
             parent = os.path.dirname(current_path_str)
-            res += f"## [{parent}/]({URL + ('/' if parent != "" else "") + parent}/)\n\n"
+            res += f"## [{parent}/]({URL + ('/' if parent != "" else "") + parent}/){os.path.basename(current_path_str)}/\n\n"
 
         for folder in dirnames:
             if folder.startswith(".git"):
